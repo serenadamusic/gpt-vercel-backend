@@ -1,8 +1,14 @@
 {
-    "name": "gpt-vercel-backend",
-    "version": "1.0.0",
-    "type": "module",
-    "dependencies": {
-      "openai": "^4.0.0"
-    }
+  "name": "gpt-vercel-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "start": "node api/chat.js"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
   }
+}
