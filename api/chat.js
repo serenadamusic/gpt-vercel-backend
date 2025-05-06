@@ -22,13 +22,13 @@ export default async function handler(req, res) {
 
   try {
     const response = await openai.chat.completions.create({
-      model: "assistant:asst_WQiIiK3jIukwi1CViLvvWAST", // Replace with your assistant ID if needed
+      model: "gpt-4", // or your assistant ID
       messages: [{ role: "user", content: userMessage }],
     });
 
     res.status(200).json({ reply: response.choices[0].message.content });
   } catch (error) {
-    console.error("OpenAI Error:", error);
-    res.status(500).json({ error: "OpenAI request failed" });
+    console.error("OpenAI error:", error.message);
+    res.status(500).json({ error: "Failed to contact OpenAI" });
   }
 }
