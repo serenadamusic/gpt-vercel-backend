@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/*.mjs": {
+    "api/chat.mjs": {
       "runtime": "nodejs@20"
     }
   }
