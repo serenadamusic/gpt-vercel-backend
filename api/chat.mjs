@@ -1,12 +1,4 @@
-export default async function handler(req, res) {
-  console.log("✅ /api/chat endpoint hit"); // debug line
 
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Only POST requests allowed" });
-  }
-
-  ...
-}
 import { OpenAI } from "openai";
 
 const openai = new OpenAI({
